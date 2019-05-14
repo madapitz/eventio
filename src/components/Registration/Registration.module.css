@@ -1,0 +1,11 @@
+.Form {
+	width: 70vw;
+	font-family: Hind;
+	text-align: center;
+}
+
+.Form input,
+.Form button {
+	display: block;
+	margin: 0 auto;
+}
