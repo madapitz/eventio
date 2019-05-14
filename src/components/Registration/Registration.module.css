@@ -1,11 +1,113 @@
+@font-face {
+	font-family: 'HindLight';
+	src: url('../../assets/fonts/Hind/Hind-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'HindSemiB';
+	src: url('../../assets/fonts/Hind/Hind-Light.ttf') format('truetype');
+}
+
 .Form {
 	width: 70vw;
 	font-family: Hind;
-	text-align: center;
+	margin-top: 22%;
+}
+
+.NoAccount {
+	color: #d2d3d5;
+	font-family: HindLight;
+	letter-spacing: -0.5px;
+	position: absolute;
+	right: 40px;
+}
+
+.NoAccount a {
+	color: #959ca4;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: HindSemiB;
+	font-weight: bold;
+	letter-spacing: -0.9px;
+}
+
+.Form div {
+	margin: 0 auto;
+	width: 400px;
+}
+
+.Form p {
+	font-family: HindLight;
+	color: #969da5;
+	margin-bottom: 40px;
+}
+
+.Form h2 {
+	font-weight: normal;
+	margin-bottom: -10px;
 }
 
 .Form input,
 .Form button {
 	display: block;
-	margin: 0 auto;
+}
+
+.Form input {
+	width: 400px;
+	font-family: HindLight;
+	color: transparent;
+	border: none;
+	background: transparent;
+	border-bottom: 2px solid #f5f9f9;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.Form div div {
+	/*background: black;*/
+	height: 60px;
+}
+
+.Form div div span {
+	position: relative;
+	top: -60px;
+	color: #d2d3d5;
+	transform: scale(0);
+ 	transition: all 0.2s ease;
+}
+
+.Form input:focus,
+.Form input:not(:placeholder-shown) {
+	color: #969da5;
+}
+
+.Form input:focus + span {
+	font-size: 12px;
+	top: -80px;
+}
+
+.Form input:not(:placeholder-shown) + span {
+	font-size: 12px;
+	top: -80px;
+}
+
+.Form span + span {
+	position: relative;
+	left: 290px;
+	cursor: pointer;
+}
+
+.Form button {
+	background: #22d486;
+	border-radius: 5px;
+	font-family: HindSemiB;
+	color: white;
+	border: none;
+	width: 200px;
+	padding: 10px 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 12px;
+	margin-top: 40px;
+	cursor: pointer;
 }
