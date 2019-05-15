@@ -43,3 +43,17 @@
 	color: #949da6;
 	font-family: 'Hind';
 }
+
+@media screen and (max-width: 600px) {
+	.Image {
+		width: 0;
+	}
+
+	.Image div {
+		display: none;
+	}
+
+	.Image h1 {
+		color: #303b44;
+	}
+}

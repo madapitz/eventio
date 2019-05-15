@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Registration from '../../../containers/Registration/Registration';
 import classes from '../Registration.module.css';
 
@@ -31,7 +32,7 @@ class SignIn extends Component {
 
 		return (
 			<Registration>
-				<p className={classes.NoAccount} >Don't have an account? <a>sign up</a></p>
+				<p className={classes.NoAccount} >Don't have an account? <Link to="/signup">sign up</Link></p>
 				<form className={classes.Form}>
 					<div>
 						<h2>Sign in to Eventio.</h2>
@@ -51,6 +52,7 @@ class SignIn extends Component {
 							<span>Password</span>
 							<span onClick={this.hideP} >{showHide}</span>
 						</div>
+						<p className={classes.NoAccountMobile} >Don't have an account? <Link to="/signup">sign up</Link></p>
 						<button>Sign in</button>
 					</div>
 				</form>

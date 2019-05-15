@@ -1,0 +1,9 @@
+.SignUp div{
+	height: 55px;
+}
+
+@media screen and (max-width: 600px) {
+	.SignUp div {
+		height: inherit;
+	}
+}

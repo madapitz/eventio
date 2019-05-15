@@ -14,15 +14,24 @@
 	margin-top: 22%;
 }
 
-.NoAccount {
+.NoAccount,
+.NoAccountMobile {
 	color: #d2d3d5;
 	font-family: HindLight;
 	letter-spacing: -0.5px;
+}
+
+.NoAccount {
 	position: absolute;
 	right: 40px;
 }
 
-.NoAccount a {
+.NoAccountMobile {
+	display: none;
+}
+
+.NoAccount a,
+.NoAccountMobile a {
 	color: #959ca4;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -45,56 +54,12 @@
 .Form h2 {
 	font-weight: normal;
 	margin-bottom: -10px;
+	color: #303b44;
 }
 
 .Form input,
 .Form button {
 	display: block;
-}
-
-.Form input {
-	width: 400px;
-	font-family: HindLight;
-	color: transparent;
-	border: none;
-	background: transparent;
-	border-bottom: 2px solid #f5f9f9;
-	margin-top: 10px;
-	margin-bottom: 30px;
-}
-
-.Form div div {
-	/*background: black;*/
-	height: 60px;
-}
-
-.Form div div span {
-	position: relative;
-	top: -60px;
-	color: #d2d3d5;
-	transform: scale(0);
- 	transition: all 0.2s ease;
-}
-
-.Form input:focus,
-.Form input:not(:placeholder-shown) {
-	color: #969da5;
-}
-
-.Form input:focus + span {
-	font-size: 12px;
-	top: -80px;
-}
-
-.Form input:not(:placeholder-shown) + span {
-	font-size: 12px;
-	top: -80px;
-}
-
-.Form span + span {
-	position: relative;
-	left: 290px;
-	cursor: pointer;
 }
 
 .Form button {
@@ -110,4 +75,51 @@
 	font-size: 12px;
 	margin-top: 40px;
 	cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+	.Form {
+		margin-top: 44%;
+	}
+
+	.Form h2,
+	.Form p {
+		text-align: center;
+	}
+
+	.Form button {
+		margin-left: auto;
+		margin-right: auto;
+		padding: 5% 0;
+		width: 80%;
+		font-size: 16px;
+		margin-top: 60px;
+	}
+
+	.Form input {
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+	}
+
+	.Form input + span {
+		left: 5%;
+	}
+
+	.Form span + span {
+		left: 66%;
+	}
+
+	.Form div {
+		width: 100vw;
+	}
+
+	.NoAccount {
+		display: none;
+	}
+
+	.NoAccountMobile {
+		display: block;
+		margin-top: -20px;
+	}
 }
