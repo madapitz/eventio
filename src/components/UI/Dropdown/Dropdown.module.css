@@ -1,0 +1,45 @@
+.Dropdown { 
+	position: relative; 
+	background: white; 
+	border-radius: 15px; 
+	width: 14vw;
+	height: 50px;
+	position: relative;
+	left: 80vw;
+	bottom: 30px;
+	padding-left: 20px; 
+	padding-top: 10px;
+	padding-bottom: 10px;
+	-webkit-box-shadow: 0px 4px 8px 0px rgba(225,225,227,1);
+	-moz-box-shadow: 0px 4px 8px 0px rgba(225,225,227,1);
+	box-shadow: 0px 4px 8px 0px rgba(225,225,227,1);
+} 
+
+.Dropdown:after { 
+	content: ''; 
+	position: absolute; 
+	top: 15px; 
+	left: 40%; 
+	width: 0; 
+	height: 0; 
+	border: 28px solid transparent; 
+	border-bottom-color: white; 
+	border-top: 0; 
+	margin-left: 45px; 
+	margin-top: -28px; 
+	
+}
+
+.Dropdown p {
+	color: #9ea3aa;
+	cursor: pointer;
+}
+
+.Profile {
+	margin-top: 0px;
+	margin-bottom: -15px;
+}
+
+/*.LogOut {
+	
+}*/

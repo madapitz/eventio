@@ -30,6 +30,11 @@ code {
     monospace;
 }
 
+.logo {
+	margin: 10px 20px;
+	font-family: 'Hind';
+}
+
 input {
 	width: 400px;
 	font-family: HindLight;
@@ -40,6 +45,7 @@ input {
 	margin-top: 10px;
 	margin-bottom: 30px;
 }
+
 
 input + span {
 	position: relative;
@@ -53,6 +59,10 @@ input:focus + span {
 	top: -80px;
 }
 
+input:focus {
+	border-color: #5b6065 !important;
+}
+
 input:not(:placeholder-shown) + span {
 	font-size: 12px;
 	top: -80px;
@@ -64,4 +74,27 @@ input + span + span {
 	bottom: 54px;
 	color: #d2d3d5;
 	cursor: pointer;
+}
+
+.errorText {
+	color: #e64c80 !important;
+}
+
+.errorInput {
+	border-color: #e64c80;
+}
+
+.initials {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	font-family: HindSemiB;
+	background-color: #d9dce1;
+	padding: 13px;
+	font-weight: bold;
+	color: #959da6;
+}
+
+.active {
+	color: #323c46;
 }

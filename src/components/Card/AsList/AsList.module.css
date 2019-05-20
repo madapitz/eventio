@@ -1,0 +1,106 @@
+.AsList {
+	width: 72vw;
+	display: flex;
+	background: white;
+	margin-bottom: 20px;
+	min-height: 50px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 23px;
+	-webkit-box-shadow: 0px 4px 8px 0px rgba(225,225,227,1);
+	-moz-box-shadow: 0px 4px 8px 0px rgba(225,225,227,1);
+	box-shadow: 0px 4px 8px 0px rgba(225,225,227,1);
+}
+
+/*.AsList h3,
+.AsList p,
+.AsList button {
+	display: inline;
+}*/
+
+.AsList h3 {
+	font-size: 18px;
+	color: #323c47;
+	font-weight: 500;
+}
+
+.CardBody {
+	color: #949ba1;
+	font-size: 13px;
+}
+
+.CardAuthor {
+	color: #868283;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.CardPeople {
+	color: #949ea8;
+	font-size: 13px;
+}
+
+.CardDate {
+	color: #d1d2d3;
+	font-size: 13px;
+}
+
+.CardButton {
+	background: #d9dce1;
+	border: none;
+	border-radius: 2px;
+	color: #a8abb0;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-family: Hind;
+	font-weight: bold;
+	width: 10%;
+	height: 30px;
+	cursor: pointer;
+}
+
+.CardButtonJoin {
+	color: #ffffff;
+	background: #22d486 !important;
+}
+
+.CardButtonJoin:hover {
+	background-color: #20bd78 !important;
+}
+
+.CardButtonLeave {
+	color: #ffffff;
+	background: #ff4181 !important;
+}
+
+.CardButtonLeave:hover {
+	background-color: #e73370 !important;
+}
+
+@media screen and (max-width: 600px) {
+	.AsList {
+		display: block;
+		padding-top: 1px;
+		padding-bottom: 2px;
+	}
+
+	.CardAuthor {
+		display: none;
+	}
+
+	.CardBody {
+		margin-top: -18px;
+	}
+
+	.CardButton {
+		width: 80px;
+		display: inline;
+		float: right;
+		margin-top: -43px;
+	}
+
+	.CardDate {
+		margin-bottom: -13px;
+	}
+	
+}

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Registration from '../../../containers/Registration/Registration';
 import classes from '../Registration.module.css';
 import specific from './SignUp.module.css';
+import * as mainActions from '../../../store/actions/mainActions';
 
 class SignUp extends Component {
 
@@ -11,7 +13,8 @@ class SignUp extends Component {
 		lastname: "",
 		email: "",
 		password: "",
-		repeatedPassword: ""
+		repeatedPassword: "",
+		error: false
 	}
 
 	handleFirstNameChange = (event) => {
@@ -32,6 +35,41 @@ class SignUp extends Component {
 
 	handleRepeatedPasswordChange = (event) => {
 		this.setState({repeatedPassword: event.target.value});
+	}
+
+	checkFormValidity = () => {
+		let validation = [];
+		if (this.state.firstname !== "") {
+			validation.push(1);
+		}
+		if (this.state.lastname !== "") {
+			validation.push(1);
+		}
+		if (this.state.email !== "") {
+			validation.push(1);
+		}
+		if (this.state.password !== "") {
+			validation.push(1);
+		}
+		if (this.state.repeatedPassword !== "") {
+			validation.push(1);
+		}
+		if (this.state.password === this.state.repeatedPassword) {
+			validation.push(1);
+		}
+
+		let sum = validation.reduce((a,b) => a+b,0);
+		return sum;
+	}
+
+	handleSubmit = (event) => {
+		if (this.checkFormValidity() === 6) {
+			this.props.onSigningUp(this.state.firstname, this.state.lastname, this.state.email,this.state.password);
+			this.props.history.push("/");
+		} else {
+			this.setState({error: true});
+		}
+		event.preventDefault();
 	}
 
 	render() {
@@ -72,13 +110,14 @@ class SignUp extends Component {
 						</div>
 						<div>
 							<input type="password" 
+							className={this.state.password !== this.state.repeatedPassword ? "errorInput" : null}
 							value={this.state.repeatedPassword}
 							onChange={this.handleRepeatedPasswordChange} 
 							placeholder=""/>
 							<span>Repeat password</span>
 						</div>
 						<p className={classes.NoAccountMobile} >Already have an account? <Link to="/signin">sign in</Link></p>
-						<button>Sign up</button>
+						<button onClick={this.handleSubmit} >Sign up</button>
 					</div>
 				</form>
 			</Registration>
@@ -86,4 +125,10 @@ class SignUp extends Component {
 	}
 }
 
-export default SignUp;
+const mapDispatchToProps = dispatch => {
+	return {
+		onSigningUp: (fname, lname, email, password) => dispatch(mainActions.postSignUp(fname, lname, email,password))
+	};
+};
+
+export default connect(null, mapDispatchToProps)(SignUp);

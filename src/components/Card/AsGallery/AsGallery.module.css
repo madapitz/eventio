@@ -1,0 +1,82 @@
+.Card {
+	background: #ffffff;
+	width:24vw;
+	min-height: 28vh;
+	-webkit-box-shadow: 0px 4px 8px 0px rgba(225,225,227,1);
+	-moz-box-shadow: 0px 4px 8px 0px rgba(225,225,227,1);
+	box-shadow: 0px 4px 8px 0px rgba(225,225,227,1);
+	display: inline-block;
+	margin: 0 0.5vw 0.5vw 0.5vw;
+	padding: 10px 0px 10px 20px;
+}
+
+.CardDate {
+	color: #d1d2d3;
+	font-size: 13px;
+}
+
+.Card h3 {
+	color: #323c47;
+	font-weight: normal;
+	margin-top: -5px;
+}
+
+.CardAuthor {
+	color: #868283;
+	font-size: 13px;
+	margin-top: -20px;
+	font-weight: bold;
+}
+
+.CardBody {
+	color: #949ba1;
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+
+.CardPeople {
+	color: #949ea8;
+	font-size: 13px;
+	display: inline-block;
+}
+
+.CardButton {
+	margin-left: 42%;
+	background: #d9dce1;
+	border: none;
+	border-radius: 2px;
+	/*padding: 5px 25px;*/
+	color: #a8abb0;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-family: Hind;
+	font-weight: bold;
+	width: 30%;
+	height: 30px;
+	cursor: pointer;
+}
+
+.CardButtonJoin {
+	color: #ffffff;
+	background: #22d486 !important;
+}
+
+.CardButtonJoin:hover {
+	background-color: #20bd78 !important;
+}
+
+.CardButtonLeave {
+	color: #ffffff;
+	background: #ff4181 !important;
+}
+
+.CardButtonLeave:hover {
+	background-color: #e73370 !important;
+}
+
+@media screen and (max-width: 600px) {
+	.Card {
+		width: 80vw;
+		margin: 0 0 2vh 0;
+	}
+}

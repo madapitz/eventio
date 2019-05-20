@@ -1,0 +1,39 @@
+.NotFound {
+	position: relative;
+	top: 35vh;
+	left: 10vw;
+	font-family: Hind;
+}
+
+.NotFound h1 {
+	color: #343a40;
+	font-weight: 500;
+}
+
+.NotFound p {
+	color: #979da2;
+}
+
+.FirstP {
+	margin-top: -10px;
+}
+
+.SecondP {
+	margin-top: -15px;
+}
+
+.Button {
+	background: #323c46;
+	border-radius: 5px;
+	font-family: HindSemiB;
+	color: white;
+	border: none;
+	width: 200px;
+	padding: 10px 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 12px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
